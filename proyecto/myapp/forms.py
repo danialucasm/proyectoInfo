@@ -1,6 +1,8 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+from django.http import request
+
 
 class UserRegisterForm(UserCreationForm): #hereda de UserCreation
     email = forms.EmailField()
@@ -11,3 +13,4 @@ class UserRegisterForm(UserCreationForm): #hereda de UserCreation
         model = User
         fields = ['username', 'email', 'password1', 'password2']
         help_text = {k:"" for k in fields }
+

@@ -1,15 +1,17 @@
-from django.shortcuts import redirect, render
+from django.shortcuts import render, redirect
 from .models import *
 from .forms import UserRegisterForm
 from django.contrib import messages
 
 
 # Create your views here.
-def feed(request):
-    posts = Post.objects.all()
 
-    context = {'posts': posts}
-    return render(request,'myapp/feed.html', context)
+# def feed(request):
+#     # posts = Post.objects.all()
+
+#     # context = {'posts': posts}
+#     context = {}
+#     return render(request,'myapp/feed.html', context)
 
 
 def register(request):
@@ -19,12 +21,11 @@ def register(request):
             form.save()
             username = form.cleaned_data['username']
             messages.success(request, f'Usuario {username} creado')
-            return redirect('feed')
+            return redirect('login') #como ya se registro ahora se tiene que ir a loguear
     else: 
         form = UserRegisterForm()
-    
-    context = {'form' : form}
-    return render(request, 'myapp/register.html', context)
+        context = {'form' : form}
+    return render(request, 'myapp/register.html', context) #para que se mantenga en register
 
 def perfil(request):
     return render(request, 'myapp/perfil.html')
