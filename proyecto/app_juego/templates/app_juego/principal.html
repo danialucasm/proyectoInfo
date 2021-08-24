@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+    {% if request.user.is_authenticated %}
+        <a href="{% url 'inicio' %}" class="inicio"></a> 
+    {% else %}
+        <div class="row">
+            <div class="col s4 center">
+                <a href="{% url 'login' %}"class="boton_ingresar", id="boton-ingresar" ><i class="boton-ingresar">Ingresar</i></a>  
+            </div>
+            <div class="col s4 center">
+                <a href="{% url 'register' %}" class="boton_registrar", id="boton-registrar"><i class="boton-registrar">Registrar</i></a> 
+            </div>
+        </div>
+  {% endif %}
+{% endblock %}
