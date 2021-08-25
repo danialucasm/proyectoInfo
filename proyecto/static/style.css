@@ -4,15 +4,31 @@ body{
 	font-family: 'Varela Round', Helvetica, Arial, serif;
 }
 /* Global Styles*/
-/* h1{
-
-} */
+h1{
+  
+}
 
 /* h2{
 } */
 
 /*Botones Personalidados*/
-
+.boton_entendido{
+  text-decoration: none;
+  padding: 10px;
+  font-weight: 100;
+  font-size: 25px;
+  color: #ffffff;
+  background-color: #1CA5B8;
+  border-radius: 6px;
+  border: 1px solid #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.boton_entendido:hover{
+  color: #1883ba;
+  background-color: #ffffff;
+}
   .boton_ingresar{
     text-decoration: none;
     padding: 10px;

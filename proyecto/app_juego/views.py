@@ -9,3 +9,11 @@ def inicio(request):
 def principal(request):
     context = {}
     return render(request,'app_juego/principal.html', context)
+
+def instrucciones(request):
+    context = {}
+    return render(request,'app_juego/instrucciones.html', context)
+
+def perfil(request):
+    context = {}
+    return render(request,'app_juego/perfil.html', context)
