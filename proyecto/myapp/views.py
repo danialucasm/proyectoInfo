@@ -19,7 +19,7 @@ def register(request):
         form = UserRegisterForm(request.POST) #para acceder a la info
         if form.is_valid():
             form.save()
-            username = form.cleaned_data['username']
+            username = form.cleaned_data['username'] #Registro de no menos de 6 digitos en username
             messages.success(request, f'Usuario {username} creado')
             return redirect('login') #como ya se registro ahora se tiene que ir a loguear
     else: 
