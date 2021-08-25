@@ -19,13 +19,13 @@ def register(request):
         form = UserRegisterForm(request.POST) #para acceder a la info
         if form.is_valid():
             form.save()
-            username = form.cleaned_data['username'] #Registro de no menos de 6 digitos en username
+            username = form.cleaned_data['username'] 
             messages.success(request, f'Usuario {username} creado')
             return redirect('login') #como ya se registro ahora se tiene que ir a loguear
     else: 
         form = UserRegisterForm()
         context = {'form' : form}
-    return render(request, 'myapp/register.html', context) #para que se mantenga en register
+        return render(request, 'myapp/register.html', context) #para que se mantenga en register
 
 def perfil(request):
     return render(request, 'myapp/perfil.html')

@@ -3,15 +3,12 @@
 {% block content %}
 
     {% if request.user.is_authenticated %}
-        <a href="{% url 'inicio' %}" class="inicio"></a> 
+        <h1 class="center">Bienvenido!! Para jugar vaya a Inicio</h1>
+     <a href="{% url 'inicio' %}" class="inicio"></a> <!--este es el inicio del menu-head-->
     {% else %}
-        <div class="row">
-            <div class="col s4 center">
-                <a href="{% url 'login' %}"class="boton_ingresar", id="boton-ingresar" ><i class="boton-ingresar">Ingresar</i></a>  
+            <div class="col s4 center", style="padding: 100mm; width: 50%; text-align: center;">
+                <a href="{% url 'login' %}"class="boton_ingresar", id="boton-ingresar", style="display: inline-block; width: 30%;"><i class="boton-ingresar">Ingresar</i></a>  
+                <a href="{% url 'register' %}" class="boton_registrar", id="boton-registrar", style="display: inline-block; margin-left: 30mm; width: 30%;"><i class="boton-registrar">Registrar</i></a> 
             </div>
-            <div class="col s4 center">
-                <a href="{% url 'register' %}" class="boton_registrar", id="boton-registrar"><i class="boton-registrar">Registrar</i></a> 
-            </div>
-        </div>
   {% endif %}
 {% endblock %}
