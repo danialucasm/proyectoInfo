@@ -1,6 +1,7 @@
+{%load static%}
 <header class="main-head">
     <nav>
-            <h1 id="logo"><img src="static/logo-gobierno.png", style="max-width: 60mm; margin-left: 5mm;"/></h1>
+            <h1 id="logo"><img src="{% static 'logo-gobierno.png' %}", style="max-width: 60mm; margin-left: 5mm;"/></h1>
             <ul>
                 {% if request.user.is_authenticated %}
                     <li><a href="{% url 'inicio' %}">Inicio</a></li>
