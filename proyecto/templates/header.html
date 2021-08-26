@@ -1,24 +1,13 @@
 <header class="main-head">
-  
-  
-  <nav style="background-color: #1CA5B8;">
-    <div class="nav-wrapper">
-      <a href="#!" class="brand-logo">Logo</a>
-      <!-- <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a> -->
-      <ul class="right hide-on-med-and-down", style="background-color: #1CA5B8;">
-        <li><a href="{% url 'inicio' %}">inicio</a></li>
-        <li><a href="{% url 'perfil' %}">perfil</a></li>
-        <li><a href="#">historial</a></li>
-        <li><a href="{% url 'logout' %}">salir</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- <ul class="sidenav" id="mobile-demo">
-    <li><a href="#">inicio</a></li>
-    <li><a href="#">perfil</a></li>
-    <li><a href="#">historial</a></li>
-    <li><a href="#">salir</a></li>
-  </ul>
-               -->
+    <nav>
+            <h1 id="logo"><img src="static/logo-gobierno.png", style="max-width: 60mm; margin-left: 5mm;"/></h1>
+            <ul>
+                {% if request.user.is_authenticated %}
+                    <li><a href="{% url 'inicio' %}">Inicio</a></li>
+                    <li><a href="{% url 'perfil' %}">Perfil</a></li>
+                    <li><a href="#">Mi Historial</a></li>
+                    <li><a href="{% url 'logout' %}">Salir</a></li>
+                {% endif %}
+            </ul>
+    </nav>
 </header>
