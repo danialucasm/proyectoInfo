@@ -7,7 +7,6 @@ from django.views import View
 urlpatterns = [
     path('login/', LoginView.as_view(template_name= 'myapp/login.html'), name='login'),
     path('logout/', LogoutView.as_view(), name='logout'),
-    # # path('perfil/', views.perfil, name='perfil'),
     path('register/', views.register, name= 'register'),
     
 ] 
