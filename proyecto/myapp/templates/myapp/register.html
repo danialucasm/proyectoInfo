@@ -3,21 +3,21 @@
 {% block content %}
 
 <form class="form" method="post"> 
-
     {% csrf_token %}
     {% for field in form %}
+        <label for="{{field.id_for_label}}">
+        {{field.label}}
+        </label>
         <div class="col s12">
             {{field}}
-            <label for="{{field.id_for_label}}">
-                {{field.label}}
-            </label>
         </div>
-        {%if field.errors%}
-        <div class="col s12 red-text center" style="padding: 0;">
+        {% if field.errors %}
+        <div class="col s12 red-text center" style="padding: 1px;">
             {{field.errors}}
         </div>
-        {%endif%}
+        {% endif %}
     {% endfor %}
+
     <button type="submit" id="submit">Registrarse</button>
 </form>
 
