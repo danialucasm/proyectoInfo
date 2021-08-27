@@ -1,8 +1,9 @@
 {%load static%}
 <header class="main-head">
-    <nav>
-            <h1 id="logo"><img src="{% static 'logo-gobierno.png' %}", style="max-width: 60mm; margin-left: 5mm;"/></h1>
-            <ul>
+    <nav style="background-color: #1CA5B8;">
+        <div class="nav-wrapper">
+            <a id="logo"><img src="{% static 'logo-gobierno.png' %}" style="max-width: 60mm; margin-left: 5mm;"/></a>
+            <ul class="right hide-on-med-and-down" style="background-color: #1CA5B8; margin-block-end: 1mm;">
                 {% if request.user.is_authenticated %}
                     <li><a href="{% url 'inicio' %}">Inicio</a></li>
                     <li><a href="{% url 'perfil' %}">Perfil</a></li>
@@ -10,5 +11,6 @@
                     <li><a href="{% url 'logout' %}">Salir</a></li>
                 {% endif %}
             </ul>
+        </div>
     </nav>
 </header>
