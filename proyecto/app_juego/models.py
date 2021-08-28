@@ -7,7 +7,7 @@ User= settings.AUTH_USER_MODEL
 
 class Pregunta(models.Model):
 
-    # NUMER_RESPUESTAS_PERMITIDAS = 1
+    NUMER_RESPUESTAS_PERMITIDAS = 1
 
     texto = models.TextField(verbose_name='Texto de la pregunta')
     max_puntaje = models.DecimalField(verbose_name='Maximo Puntaje', default=3, decimal_places=2, max_digits=6)

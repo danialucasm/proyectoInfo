@@ -1,14 +1,13 @@
 from django.contrib import admin
-
 from .models import Pregunta, ElegirRespuesta, PreguntasRespondidas
-
+from .forms import ElegirInLineFormset
 
 class ElegirRespuestaInline(admin.TabularInline):
     model = ElegirRespuesta
     can_delete = False
     max_num = ElegirRespuesta.MAXIMO_RESPUESTA
     min_num = ElegirRespuesta.MAXIMO_RESPUESTA
-    # formset = ElegirInLineFormset
+    formset = ElegirInLineFormset
 
 class PreguntaAdmin(admin.ModelAdmin):
     model = Pregunta
