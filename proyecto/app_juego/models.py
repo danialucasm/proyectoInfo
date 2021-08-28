@@ -44,7 +44,7 @@ class TriviaUsuario(models.Model):
             return None
         return random.choice(preguntas_restantes) #Para que toque cualquier pregunta
     
-    def validar_intento(Self, pregunta_respondida, respuesta_seleccionada):
+    def validar_intento(self, pregunta_respondida, respuesta_seleccionada):
         if pregunta_respondida.pregunta_id != respuesta_seleccionada.pregunta_id:
             return
         
@@ -59,8 +59,14 @@ class TriviaUsuario(models.Model):
 
 
         pregunta_respondida.save()
-        
-        #Self.actualizar_puntaje()
+        self.actualizar_puntaje()
+
+    def actualizar_puntaje(self):
+        puntaje_actualizado = self.intentos.filter(correcta=True).aggregate(
+			models.Sum('puntaje_obtenido'))['puntaje_obtenido__sum']
+            
+        self.puntaje_total = puntaje_actualizado
+        self.save()
 
 
 
