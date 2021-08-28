@@ -8,4 +8,5 @@ urlpatterns = [
     path("instrucciones/", views.instrucciones, name="instrucciones"),
     path("perfil/", views.perfil, name="perfil"),
     path("jugar/", views.jugar, name="jugar"),
+    path("resultado/<int:pregunta_respondida_pk>/", views.resultado_pregunta, name="resultado"),
 ] 

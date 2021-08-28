@@ -29,14 +29,14 @@
                     <input type="hidden" name="pregunta_pk" value="{{pregunta.pk}}">
 
                     {% for opciones in pregunta.opciones.all %}
-                    <div>
+                    <p style="text-align: left;">
                         <label for="choice-{{forloop.counter}}">
                             <input class="with-gap" type="radio" name="respuesta_pk" value="{{opciones.pk}}" id="choice-{{forloop.counter}}" checked />
                                 <span>
                                     {{opciones.texto}}
                                 </span>
-                        </label>
-                    </div>
+                        </label>                        
+                    </p>
                     {% endfor %}
                     <button type="submit" class="button">
                         Enviar

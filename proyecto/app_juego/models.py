@@ -60,7 +60,7 @@ class TriviaUsuario(models.Model):
 
         pregunta_respondida.save()
         
-        Self.actualizar_puntaje()
+        #Self.actualizar_puntaje()
 
 
 
