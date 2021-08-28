@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.contrib.admin.sites import AdminSite
+from django.shortcuts import redirect, render
 
 # Create your views here.
 
@@ -8,11 +9,11 @@ def inicio(request):
 
 def principal(request):
     if (request.user.is_authenticated and request.user.is_staff):
-        template ='app_juego/admin_dashboard.html' #cambiar porque no anda
+        return redirect("admin/", AdminSite.urls) #site de administrador
     else:
         template = 'app_juego/principal.html'
-    context = {}
-    return render(request,template, context)
+        context = {}
+        return render(request,template, context)
 
 def instrucciones(request):
     context = {}
