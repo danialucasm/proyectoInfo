@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Pregunta, ElegirRespuesta, PreguntasRespondidas
+from .models import Pregunta, ElegirRespuesta, PreguntasRespondidas, TriviaUsuario
 from .forms import ElegirInLineFormset
 
 class ElegirRespuestaInline(admin.TabularInline):
@@ -24,4 +24,5 @@ class PreguntasRespondidasAdmin(admin.ModelAdmin):
 admin.site.register(Pregunta, PreguntaAdmin)
 admin.site.register(ElegirRespuesta)
 admin.site.register(PreguntasRespondidas)
+admin.site.register(TriviaUsuario)
 
