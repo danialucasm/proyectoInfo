@@ -42,6 +42,18 @@ def jugar(request):
     return render (request,'app_juego/juego.html', context)
  
 
+def tablero(request):
+	total_usuarios_quiz = TriviaUsuario.objects.order_by('-puntaje_total')[:10]
+	contador = total_usuarios_quiz.count()
+
+	context = {
+
+		'usuario_quiz':total_usuarios_quiz,
+		'contar_user':contador
+	}
+
+	return render(request, 'app_juego/tablero.html', context)
+
 def principal(request):
     if (request.user.is_authenticated and request.user.is_staff):
         return redirect("admin/", AdminSite.urls) #site de administrador
