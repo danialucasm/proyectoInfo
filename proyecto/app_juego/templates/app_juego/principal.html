@@ -3,12 +3,19 @@
 {% block content %}
 
     {% if request.user.is_authenticated %}
-        <h1 class="center">Bienvenido {{ request.user.username }}!! Para jugar vaya a Inicio</h1>
+        <div class="container" style="margin-top: 50mm;">
+            <h1 class="center">
+                ¡Bienvenido/a {{ request.user.username }}!
+            </h1>
+            <h3 class="center">
+                Para jugar vaya a Inicio
+            </h3>
+        </div>
      <a href="{% url 'inicio' %}" class="inicio"></a> <!--este es el inicio del menu-head-->
     {% else %}
-    <div class="row" >
+    <div class="row">
 
-        <div class="col s4">
+        <div class="col s4" >
             <a href="{% url 'login' %}"class="boton_ingresar" id="boton-ingresar" ><i class="boton-ingresar">Ingresar</i></a>  
         </div>
 
