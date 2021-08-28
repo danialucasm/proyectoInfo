@@ -3,7 +3,7 @@
 {% block content %}
 
     {% if request.user.is_authenticated %}
-        <h1 class="center">Bienvenido!! Para jugar vaya a Inicio</h1>
+        <h1 class="center">Bienvenido {{ request.user.username }}!! Para jugar vaya a Inicio</h1>
      <a href="{% url 'inicio' %}" class="inicio"></a> <!--este es el inicio del menu-head-->
     {% else %}
     <div class="row" >

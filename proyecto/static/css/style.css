@@ -21,7 +21,7 @@ body{
   font-weight: 100;
   font-size: 25px;
   color: #ffffff;
-  background-color: #1CA5B8;
+  background-color: #417690;
   border-radius: 6px;
   border: 1px solid #ffffff;
   display: flex;
@@ -29,7 +29,7 @@ body{
   align-items: center;
 }
 .boton_entendido:hover{
-  color: #1883ba;
+  color: #417690;
   background-color: #ffffff;
 }
   .boton_ingresar{
@@ -38,7 +38,7 @@ body{
     font-weight: 100;
     font-size: 25px;
     color: #ffffff;
-    background-color: #1CA5B8;
+    background-color: #417690;
     border-radius: 6px;
     border: 1px solid #ffffff;
     display: flex;
@@ -46,7 +46,7 @@ body{
     align-items: center;
   }
   .boton_ingresar:hover{
-    color: #1883ba;
+    color: #417690;
     background-color: #ffffff;
   }
   .boton_registrar{
@@ -55,7 +55,7 @@ body{
     font-weight: 100;
     font-size: 25px;
     color: #ffffff;
-    background-color: #1CA5B8;
+    background-color: #417690;
     border-radius: 6px;
     border: 1px solid #ffffff;
     display: flex;
@@ -63,7 +63,7 @@ body{
     align-items: center;
   }
   .boton_registrar:hover{
-    color: #1883ba;
+    color: #417690;
     background-color: #ffffff;
   }
  
@@ -75,7 +75,7 @@ body{
   font-weight: 100;
   font-size: 25px;
   color: #ffffff;
-  background-color: #1CA5B8;
+  background-color: #417690;
   border-radius: 6px;
   border: 1px solid #ffffff;
   display: flex;
@@ -83,7 +83,7 @@ body{
   align-items: center;
 }
 .boton_instrucciones:hover{
-  color: #1883ba;
+  color: #417690;
   background-color: #ffffff;
 }
 
@@ -93,7 +93,7 @@ body{
   font-weight: 100;
   font-size: 25px;
   color: #ffffff;
-  background-color: #1CA5B8;
+  background-color: #417690;
   border-radius: 6px;
   border: 1px solid #ffffff;
   display: flex;
@@ -101,7 +101,7 @@ body{
   align-items: center;
 }
 .boton_jugar:hover{
-  color: #1883ba;
+  color: #417690;
   background-color: #ffffff;
 }
 
@@ -328,7 +328,7 @@ button#submit {
   width: 100%;
   padding: 20px 0;
   text-align: center;
-  background: #1CA5B8;
+  background: #417690;
   color: #fff;
   border: 0;
   border-radius: 4px;

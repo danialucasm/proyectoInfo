@@ -19,4 +19,4 @@ class ElegirInLineFormset(forms.BaseInlineFormSet):
         try:
             assert respuesta_correcta == Pregunta.NUMER_RESPUESTAS_PERMITIDAS #Control entre respuesta y las permitidas
         except AssertionError:
-            raise forms.ValidationError('Solo una respuesta es permitida como correcta, vuelva a intentarlo')
+            raise forms.ValidationError('Solo una respuesta es permitida como correcta, vuelva a intentarlo') #solo puede registrar UNA sola correcta
