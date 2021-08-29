@@ -83,14 +83,12 @@ body{
  
   /*MODIFICAR ESTOS BOTONES*/
   
-.boton_instrucciones{
-  width: 1px;
-  height: 1px;
+.boton_instrucciones{ 
   position: static;
   display: inline;
   text-decoration: none;
   padding: 10px;
-  padding-inline:10%;
+  padding-inline:40px;
   font-weight: 100;
   font-size: 25px;
   margin-right: 10%;
@@ -107,13 +105,12 @@ body{
 }
 
 .boton_jugar{
-  width: 1px;
-  height: 1px;
   position: static;
   display: inline;
   text-decoration: none;
   padding: 10px;
-  margin-inline:auto;
+  padding-inline:85px;
+  margin:auto;
   font-weight: 100;
   font-size: 25px;
   color: #ffffff;
@@ -430,3 +427,15 @@ img.profile{
 
 }
 
+.recuadro-perfil{
+  background: #edf0f3; 
+  color: black; 
+  width: 60%; 
+  padding: 10px; 
+  border: 2px solid #446790; 
+  border-radius: 15px; 
+  /* margin-inline: auto;  */
+  display:inline ; 
+  /* position: static */
+
+}
