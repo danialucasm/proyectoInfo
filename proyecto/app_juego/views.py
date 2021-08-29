@@ -66,8 +66,5 @@ def instrucciones(request):
     context = {}
     return render(request,'app_juego/instrucciones.html', context)
 
-def perfil(request):
-    context = {}
-    return render(request,'app_juego/perfil.html', context)
 
    

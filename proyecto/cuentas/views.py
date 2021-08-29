@@ -17,7 +17,10 @@ def register(request):
             return redirect('login') #como ya se registro ahora se tiene que ir a loguear
 
     context = {'form' : form}
-    return render(request, 'myapp/register.html', context) #para que se mantenga en register
+    return render(request, 'cuentas/register.html', context) #para que se mantenga en register
 
 def perfil(request):
-    return render(request, 'myapp/perfil.html')
+    return render(request, 'cuentas/perfil.html')
+
+def editarPerfil(request):
+    return render(request, 'cuentas/editarPerfil.html')
