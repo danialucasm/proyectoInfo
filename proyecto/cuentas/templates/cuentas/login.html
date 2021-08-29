@@ -6,6 +6,9 @@
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit" id="submit">Ingresar</button>
+    <div style="text-align: center;">
+        <a class="" href="{% url 'register' %}" style="color: rgb(129, 129, 129);">Registrese para crear una cuenta</a>
+    </div>      
 </form>
 
 {% endblock %}
