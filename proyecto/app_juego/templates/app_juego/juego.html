@@ -9,8 +9,7 @@
 
         <div class="container" style="margin-top: 65mm;">
             <div class="jumbotron my-4">
-                <h4> Ya haz respondido a todas nuestras preguntas. Mira el tablero de posiciones.</h4>
-                <a href="{% url 'tablero' %}" style="color:black">Ver Aqui</a>                
+                <h4> Ya haz respondido a todas nuestras preguntas. Mira el tablero con el ranking de posiciones.</h4>                
             </div>
         </div>
 
@@ -39,7 +38,7 @@
                     </p>
                     {% endfor %}
                     <button type="submit" class="button">
-                        Enviar
+                        Comprobar
                     </button>
                 </form>
             </div>
@@ -49,7 +48,7 @@
 
 <script>
     window.addEventListener('load', () =>{
-        setTimeout(carga, 2000);
+        setTimeout(carga, 1000);
 
         //carga(); tambien podemos usar sin time definido
         function carga(){
