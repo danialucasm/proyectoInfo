@@ -430,12 +430,33 @@ img.profile{
 .recuadro-perfil{
   background: #edf0f3; 
   color: black; 
-  width: 60%; 
+  width: 45%; 
   padding: 10px; 
   border: 2px solid #446790; 
   border-radius: 15px; 
-  /* margin-inline: auto;  */
-  display:inline ; 
+  /* margin-inline: 10px; */
   /* position: static */
 
+}
+.column {
+  float: left;
+  padding: 10px;
+}
+
+.left-recuadro{
+  text-align: center;
+  width: 30%;
+  margin-right: 20px; 
+  
+  padding-top: 0px;
+}
+
+ .right-recuadro {
+  width: 50%;
+  margin: 0px;
+  text-align: left;
+}
+
+.recuadro-instrucciones{
+  padding: 5mm; width: 100%; text-align: justify; background: #edf0f3; color: black; padding: 15px; border: 2px solid #446790; border-radius: 15px;
 }

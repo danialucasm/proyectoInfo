@@ -4,18 +4,13 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <h4 class="center" style="padding: 5mm; margin-top: 5mm;">Perfil de Usuario <a href="{% url 'editarPerfil' %}"><i class="fa fa-pencil" style="font-size:24px; color:#1CA5B8"></i></a> </h4>
-<div style="width:100%">
-    <i class="fa fa-user" style="font-size:100px; color:#1CA5B8; display:inline ;"></i>
-<!-- ]    <div class="center recuadro-perfil"> -->
-    <div class="col s4">
-        <p style="text-align: left; width: 50%px">
-            <u style="font-weight: bold;">Usuario</u>: {{ request.user.username }} <br><br>
-            <u style="font-weight: bold;">Última sesión</u>: {{ request.user.last_login}} <br><br>
-            <u style="font-weight: bold;">Email</u>: {{ request.user.email }}
-        </p>        
-    </div>
+<div class="row center recuadro-perfil" style="align-content: center;">
 
-
-    <!-- </div> -->
+    <i class="column center left-recuadro fa fa-user" style="font-size:130px; color:#1CA5B8;"></i>
+    <p class="center column right-recuadro ">
+        <u style="font-weight: bold;">Usuario</u>: {{ request.user.username }} <br><br>
+        <u style="font-weight: bold;">Última sesión</u>: {{ request.user.last_login}} <br><br>
+        <u style="font-weight: bold;">Email</u>: {{ request.user.email }}
+    </p>   
 </div>
 {% endblock %} 
