@@ -74,6 +74,6 @@ class PreguntasRespondidas(models.Model):
     triviaUser = models.ForeignKey(TriviaUsuario, on_delete=models.CASCADE, related_name='intentos')
     pregunta = models.ForeignKey(Pregunta, on_delete=models.CASCADE)
     respuesta = models.ForeignKey(ElegirRespuesta, on_delete=models.CASCADE, null=True)
-    correcta = models.BooleanField(verbose_name='¿Es esta la respuesta correcta?', default=False, null=False)
+    correcta = models.BooleanField(verbose_name='¿Es esta la respuesta correcta?', default=True, null=False)
     puntaje_obtenido = models.DecimalField(verbose_name='Puntaje Obtenido', default=0, decimal_places=2, max_digits=6)
 
