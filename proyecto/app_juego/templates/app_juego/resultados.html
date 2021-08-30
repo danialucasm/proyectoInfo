@@ -1,10 +1,10 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-<div class="container" style="margin-top: 65mm;">
+<div class="container" style="display: block;margin-top: 5%;  padding-inline: 10px; padding-top: 10px; padding-bottom: 10px; background-color: white">
     
     <div class="jumbotron my-4">
-        <h3 class="text-info"> {{respondida.pregunta.texto|safe}}</h3>
+        <h3 class="text-info" style="margin-top: 10px;"> {{respondida.pregunta.texto|safe}}</h3>
         <p>
            <strong> Tu respuesta:</strong>
            {{respondida.respuesta.texto|safe}}
@@ -16,13 +16,16 @@
 
     {% else %}
         <h4 class="text-danger">Incorrecto... Sigue intentando.</h4>
-
     {% endif %}
-    <a href="{% url 'jugar' %}">
-		<button class="button">
-			Continuar
-		</button>
-	</a>
+    <hr>
+    <div style="text-align: right;">
+        <a href="{% url 'jugar' %}">
+            <button class="button">
+                Continuar
+            </button>
+        </a>
+    </div>
+    
 
 	</div>
 </div>

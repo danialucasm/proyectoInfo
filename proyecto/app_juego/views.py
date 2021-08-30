@@ -67,4 +67,13 @@ def instrucciones(request):
     return render(request,'app_juego/instrucciones.html', context)
 
 
-   
+# def historial(request):
+#     total_usuarios_quiz = TriviaUsuario.objects.order_by('-puntaje_total')[:10]
+# 	#contador = total_usuarios_quiz.count()
+
+# 	context = {
+
+# 		'usuario_quiz':total_usuarios_quiz,
+# 		#'contar_user':contador
+# 	}
+#     return render(request, 'app_juego/historial.html', context) 

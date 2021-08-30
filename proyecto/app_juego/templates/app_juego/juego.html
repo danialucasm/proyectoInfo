@@ -4,10 +4,10 @@
     <div class="progress" id="barra" style="margin-top: 70mm;">
         <div class="indeterminate"></div>
     </div>
-<div class="hide" id="contenido" style="margin-top: 20%;  padding-inline: 10%;">
+<div class="hide" id="contenido" style="display: block;margin-top: 5%;  padding-inline: auto; background-color: white">
     {% if pregunta is None %}
 
-        <div class="container" style="margin-top: 65mm;">
+        <div class="container" style="margin-top: 65mm; padding: 10mm;">
             <div class="jumbotron my-4">
                 <h4> Ya haz respondido a todas nuestras preguntas. Mira el tablero con el ranking de posiciones.</h4>                
             </div>
@@ -15,7 +15,9 @@
 
     {% else %}
 
-        <div class="container" style="align-content: center; text-align: center; margin-inline: auto;">
+        <div class="container" style="align-content: center; text-align: center; margin-inline: auto; padding-bottom: 8mm">
+            <h3 style="text-align: left; padding-top: 8mm"> Pregunta Nro 1</h3>
+            <hr>
             <h4 style="font-family: 'Lucida Sans';text-align: left; text-align: justify;">
                 {{pregunta.texto}}
             </h4>
@@ -23,7 +25,7 @@
             <form method="POST" class="form">
                 {% csrf_token %}
                 <input type="hidden" name="pregunta_pk" value="{{pregunta.pk}}">
-
+                <p style="text-align: left;"> Seleccione una: </p>
                 {% for opciones in pregunta.opciones.all %}
                 <p style="text-align: left;">
                     <label for="choice-{{forloop.counter}}">
