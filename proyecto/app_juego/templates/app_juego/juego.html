@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-    <div class="progress" id="barra" style="margin-top: 70mm;">
+    <div class="progress" id="barra" style="margin-top: 85mm; width: 50%; margin-left: 25%;">
         <div class="indeterminate"></div>
     </div>
 <div class="hide" id="contenido" style="display: block;margin-top: 5%;  padding-inline: auto; background-color: white">
@@ -9,14 +9,14 @@
 
         <div class="container" style="margin-top: 65mm; padding: 10mm;">
             <div class="jumbotron my-4">
-                <h4> Tu puntaje es de: {{ TriviaUsuario.puntaje_total}}. Mira el tablero con el ranking de posiciones.</h4>                
+                <h4> Tu puntaje es de: {{ request.TriviaUsuario.puntaje_total }}. Mira el tablero con el ranking de posiciones.</h4>                
             </div>
         </div>
 
     {% else %}
 
         <div class="container" style="align-content: center; text-align: center; margin-inline: auto; padding-bottom: 8mm">
-            <h3 style="text-align: left; padding-top: 8mm"> Pregunta Nro 1</h3>
+            <h3 style="text-align: left; padding-top: 8mm"> Pregunta Nro </h3>
             <hr>
             <h4 style="font-family: 'Lucida Sans';text-align: left; text-align: justify;">
                 {{pregunta.texto}}

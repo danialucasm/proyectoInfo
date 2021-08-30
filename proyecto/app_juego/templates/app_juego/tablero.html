@@ -1,38 +1,38 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-
-<div class="container">
-    <h4 class="center">
+    <h4 class="center" style="margin-top: 10mm; font-family: Georgia, 'Times New Roman', Times, serif;">
         <span>
             Los {{contar_user}} mejores jugadores
         </span>
     </h4>
-    <table class="striped center" style=" background-color: #aee0e6;">
+
+    <table class="striped center" style=" background-color: #c2e0e4; margin-top: 30mm;">
         <thead>
             <tr>
-                <th style="text-align: center;">Posicion</th>
-                <th style="text-align: center;">Usuario</th>
-                <th style="text-align: center;">Puntaje</th>
+
+                <th class="th-titulo">Posicion</th>
+                <th class="th-titulo">Usuario</th>
+                <th class="th-titulo">Puntaje</th>
             </tr>
         </thead>
         <tbody>
             {% for user_quiz in usuario_quiz %}
                 <tr>
-                    <th style="text-align: center;">
+                    <th class="th-contenido">
                         {{forloop.counter}}
                     </th>
-                    <th style="text-align: center;">
+                    <th class="th-contenido">
                         {{user_quiz.usuario.username}}
                     </th>
-                    <th style="text-align: center;">
+                    <th class="th-contenido">
                         {{user_quiz.puntaje_total}}
                     </th>
                 </tr>
             {% endfor %}    
         </tbody>
     </table>
-</div>
+
 
 
 

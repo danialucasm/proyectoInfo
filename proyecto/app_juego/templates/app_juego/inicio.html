@@ -1,14 +1,17 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-
+    <h3 style="text-align: center; margin-top: 50mm; font-family: Georgia, 'Times New Roman', Times, serif;">¿Estas listo para ver cuánto sabes sobre la Provincia del Chaco?</h3>
+    <h5 style="text-align: center; margin-top: 1mm; font-weight: bold;">¡Buena suerte!</h5>
+        
         <div class="bloque">
             <a href="{% url 'instrucciones' %}" class="boton_instrucciones">Instrucciones</a>  
             <a href="#modal1" class="boton_jugar modal-trigger">Jugar</a>
+            
             <!-- Modal Structure -->
             <div id="modal1" class="modal modal-fixed-footer" style="block-size: 55mm; margin-top: 40mm;">
                 <div class="modal-content" style="padding-bottom: 15mm;">
-                <h4>¿Está seguro que desea realizar esta acción?</h4>
+                <h4 style="font-family: Georgia, 'Times New Roman', Times, serif;">¿Está seguro que desea realizar esta acción?</h4>
                 <p style="font-weight: bolder; color: lightslategrey;">Recuerde que posee un sólo intento. Para jugar, presione "continuar".</p>
                 </div>
                 <div class="modal-footer">
