@@ -20,6 +20,7 @@ def resultado_pregunta(request, pregunta_respondida_pk):
 
 def jugar(request):
     TriviaUser, created = TriviaUsuario.objects.get_or_create(usuario=request.user)
+
     if request.method == 'POST':
         pregunta_pk = request.POST.get('pregunta_pk')
         pregunta_respondida = TriviaUser.intentos.select_related('pregunta').get(pregunta__pk=pregunta_pk)
@@ -31,11 +32,12 @@ def jugar(request):
             raise Http404
         TriviaUser.validar_intento(pregunta_respondida,opcion_seleccionada)
         return redirect('resultado', pregunta_respondida.pk)
+        
     else:
         pregunta = TriviaUser.obtener_nuevas_preguntas()        
         if pregunta is not None:
             TriviaUser.crear_intentos(pregunta)
-
+        
         context= {
             'pregunta':pregunta
         }
@@ -66,14 +68,3 @@ def instrucciones(request):
     context = {}
     return render(request,'app_juego/instrucciones.html', context)
 
-
-# def historial(request):
-#     total_usuarios_quiz = TriviaUsuario.objects.order_by('-puntaje_total')[:10]
-# 	#contador = total_usuarios_quiz.count()
-
-# 	context = {
-
-# 		'usuario_quiz':total_usuarios_quiz,
-# 		#'contar_user':contador
-# 	}
-#     return render(request, 'app_juego/historial.html', context) 

@@ -1,6 +1,7 @@
 from django.db import models
 from django.conf import settings
 from django.contrib.auth.models import User
+from datetime import datetime
 import random
 
 User= settings.AUTH_USER_MODEL
@@ -44,6 +45,7 @@ class TriviaUsuario(models.Model):
             return None
         return random.choice(preguntas_restantes) #Para que toque cualquier pregunta
     
+
     def validar_intento(self, pregunta_respondida, respuesta_seleccionada):
         if pregunta_respondida.pregunta_id != respuesta_seleccionada.pregunta_id:
             return

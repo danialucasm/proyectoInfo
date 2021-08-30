@@ -8,24 +8,24 @@
             Los {{contar_user}} mejores jugadores
         </span>
     </h4>
-    <table class="striped center">
+    <table class="striped center" style=" background-color: #aee0e6;">
         <thead>
             <tr>
-                <th>Posicion</th>
-                <th>Usuario</th>
-                <th>Puntaje</th>
+                <th style="text-align: center;">Posicion</th>
+                <th style="text-align: center;">Usuario</th>
+                <th style="text-align: center;">Puntaje</th>
             </tr>
         </thead>
         <tbody>
             {% for user_quiz in usuario_quiz %}
                 <tr>
-                    <th>
+                    <th style="text-align: center;">
                         {{forloop.counter}}
                     </th>
-                    <th>
+                    <th style="text-align: center;">
                         {{user_quiz.usuario.username}}
                     </th>
-                    <th>
+                    <th style="text-align: center;">
                         {{user_quiz.puntaje_total}}
                     </th>
                 </tr>

@@ -4,7 +4,23 @@
 
         <div class="bloque">
             <a href="{% url 'instrucciones' %}" class="boton_instrucciones">Instrucciones</a>  
-            <a href="{% url 'jugar' %}" class="boton_jugar">Jugar</a>
+            <a href="#modal1" class="boton_jugar modal-trigger">Jugar</a>
+            <!-- Modal Structure -->
+            <div id="modal1" class="modal modal-fixed-footer" style="block-size: 55mm; margin-top: 40mm;">
+                <div class="modal-content" style="padding-bottom: 15mm;">
+                <h4>¿Está seguro que desea realizar esta acción?</h4>
+                <p style="font-weight: bolder; color: lightslategrey;">Recuerde que posee un sólo intento. Para jugar, presione "continuar".</p>
+                </div>
+                <div class="modal-footer">
+                    <a  href="#!" class= "btn modal-close" style="background-color:#417690 ;">Cerrar</a><a href="{% url 'jugar' %}" class="modal-close waves-effect waves-green btn-flat">Continuar</a>
+                </div>
+            </div>
         </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.modal');
+        var instances = M.Modal.init(elems);
+        });
+    </script>
 
 {% endblock %}
