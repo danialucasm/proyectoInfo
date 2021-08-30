@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<form class="form" method="post"> 
+<form class="form" method="post" style="margin-top: 10%;"> 
     {% csrf_token %}
     {% for field in form %}
         <label for="{{field.id_for_label}}">
