@@ -1,13 +1,13 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-
-<form class="form" method="post" style="margin-top: 10%;"> 
+<h4 class="center" style="padding: 5mm; margin-top: 30mm; font-family: Georgia, 'Times New Roman', Times, serif;">Inicio de Sesión</h4>
+<form class="form" method="post" style="padding-top: 1mm;"> 
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit" id="submit">Ingresar</button>
     <div style="text-align: center;">
-        <a class="" href="{% url 'register' %}" style="color: rgb(129, 129, 129);">Registrese para crear una cuenta</a>
+        <a class="" href="{% url 'register' %}" style="color: rgb(129, 129, 129);">Regístrate para crear una cuenta</a>
     </div>      
 </form>
 
