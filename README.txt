@@ -1,5 +1,8 @@
-CONSOLA CMD
 
+para usar requirements.txt -> pip install requirements.txt
+
+
+CONSOLA CMD
 cd entorno 
 cd Scripts activate #activamos entorno donde esta instalado django 
 cd .. 
@@ -9,4 +12,3 @@ python manage.py makermigrations
 python manage.py migrate 
 python manage.py runserver
 
-para usar requirements.txt -> pip install requirements.txt
