@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import *
-from .forms import UserRegisterForm
+from .forms import UserRegisterForm, editProfileForm
 from django.contrib import messages
 
 
@@ -23,4 +23,14 @@ def perfil(request):
     return render(request, 'cuentas/perfil.html')
 
 def editarPerfil(request):
-    return render(request, 'cuentas/editarPerfil.html')
+    if not request.user.is_authenticated:
+        return redirect("login")
+    perfil = request.user
+    form = editProfileForm(instance=perfil)
+    if request.method == "POST":
+        form = editProfileForm(request.POST, instance=perfil)
+        if form.is_valid():
+            user = form.save()
+            return redirect("perfil")
+    context = {"form":form}
+    return render(request, 'cuentas/editarPerfil.html', context)
