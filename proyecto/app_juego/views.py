@@ -1,4 +1,5 @@
 from django.core.exceptions import ObjectDoesNotExist
+from django.forms.widgets import Select
 from .models import TriviaUsuario, Pregunta, PreguntasRespondidas
 from django.contrib.admin.sites import AdminSite
 from django.shortcuts import redirect, render, get_object_or_404
@@ -34,12 +35,14 @@ def jugar(request):
         return redirect('resultado', pregunta_respondida.pk)
         
     else:
-        pregunta = TriviaUser.obtener_nuevas_preguntas()        
+        pregunta = TriviaUser.obtener_nuevas_preguntas()
+        resultado = TriviaUser.puntaje_total     
         if pregunta is not None:
             TriviaUser.crear_intentos(pregunta)
         
         context= {
-            'pregunta':pregunta
+            'pregunta':pregunta,
+            'resultado': resultado
         }
     return render (request,'app_juego/juego.html', context)
  
