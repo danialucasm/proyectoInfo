@@ -9,11 +9,4 @@ python manage.py makermigrations
 python manage.py migrate 
 python manage.py runserver
 
-Routes/URLS 
---> localhost:8000/
-http://127.0.0.1:8000/cuenta/login/ 
---> localhost:8000/cuenta/register/
---> localhost:8000/cuenta/logout/ 
---> localhost:8000/inicio/ 
---> http://127.0.0.1:8000/perfil/ 
---> localhost:8000/admin/
+para usar requirements.txt -> pip install requirements.txt
