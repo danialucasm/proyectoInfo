@@ -8,7 +8,7 @@ from django.contrib import messages
 
 def register(request):
     form = UserRegisterForm()
-    if request.method =='POST': #Para utilizar los campos que fueron llenados en el form, else para q se muetre form vacio
+    if request.method =='POST': #Para utilizar los campos que fueron llenados en el form, else para q se muestre form vacio
         form = UserRegisterForm(request.POST) #para acceder a la info
         if form.is_valid():
             form.save()
@@ -17,7 +17,7 @@ def register(request):
             return redirect('login') #como ya se registro ahora se tiene que ir a loguear
 
     context = {'form' : form}
-    return render(request, 'cuentas/register.html', context) #para que se mantenga en register
+    return render(request, 'cuentas/register.html', context)
 
 def perfil(request):
     return render(request, 'cuentas/perfil.html')

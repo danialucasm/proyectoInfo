@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<h4 class="center" style="padding: 5mm; margin-top: 30mm; font-family: Georgia, 'Times New Roman', Times, serif;">Editar Perfil</h4>
+<h4 class="center" style="padding: 5mm; margin-top: 30mm; font-family: Georgia, 'Times New Roman', Times, serif;">Editar Contraseña</h4>
 <form class="form" method="post" style="padding-top: 0mm;"> 
     {% csrf_token %}
     
@@ -19,10 +19,6 @@
         </div>
         {% endif %}
     {% endfor %}
-    <div class="row center" style="color: black; font-weight: bold; margin-top: 5mm;">
-        {{ form.password.help_text | safe }}
-    </div>
     <button type="submit" id="submit">Guardar Cambios</button>
 </form>
-
 {% endblock %}
