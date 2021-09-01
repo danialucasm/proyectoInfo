@@ -39,6 +39,8 @@ class TriviaUsuario(models.Model):
         intento.save()
 
     def obtener_nuevas_preguntas(self):
+        if self.intentos.all().count() > 12:
+            return None        
         respondidas = PreguntasRespondidas.objects.filter(triviaUser=self).values_list('pregunta__pk', flat=True)
         preguntas_restantes = Pregunta.objects.exclude(pk__in=respondidas)
         if not preguntas_restantes.exists():
@@ -71,12 +73,9 @@ class TriviaUsuario(models.Model):
         self.puntaje_total = puntaje_actualizado
         self.save()
 
-
-
 class PreguntasRespondidas(models.Model):
     triviaUser = models.ForeignKey(TriviaUsuario, on_delete=models.CASCADE, related_name='intentos')
     pregunta = models.ForeignKey(Pregunta, on_delete=models.CASCADE)
     respuesta = models.ForeignKey(ElegirRespuesta, on_delete=models.CASCADE, null=True)
     correcta = models.BooleanField(verbose_name='¿Es esta la respuesta correcta?', default=True, null=False)
     puntaje_obtenido = models.DecimalField(verbose_name='Puntaje Obtenido', default=0, decimal_places=2, max_digits=6)
-

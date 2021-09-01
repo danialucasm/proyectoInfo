@@ -35,8 +35,8 @@ def jugar(request):
         return redirect('resultado', pregunta_respondida.pk)
         
     else:
+        resultado = TriviaUser.puntaje_total         
         pregunta = TriviaUser.obtener_nuevas_preguntas()
-        resultado = TriviaUser.puntaje_total     
         if pregunta is not None:
             TriviaUser.crear_intentos(pregunta)
         

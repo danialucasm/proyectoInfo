@@ -9,5 +9,4 @@ urlpatterns = [
     path("jugar/", views.jugar, name="jugar"),
     path("tablero/", views.tablero, name="tablero"),
     path("resultado/<int:pregunta_respondida_pk>/", views.resultado_pregunta, name="resultado"),
-
 ] 
