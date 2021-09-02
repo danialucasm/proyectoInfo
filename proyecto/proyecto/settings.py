@@ -12,9 +12,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-lq&@a0jby9lu-8_38vt_sz&=a-&hd#(c5^!yszb^cwlr7fz9j+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+ambiente = os.environ.get("ENVIROMENT")
 
-ALLOWED_HOSTS = []
+if ambiente == "PROD":
+    DEBUG = False
+else:
+    DEBUG = True
+
+ALLOWED_HOSTS = ["info-triviachaco.herokuapp.com"]
 
 
 # Application definition
@@ -110,7 +115,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
-
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
@@ -118,3 +123,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'principal'
 LOGOUT_REDIRECT_URL = 'principal'
+
+
+if ambiente == "PROD":
+    import django_heroku
+    django_heroku.settings(locals())
