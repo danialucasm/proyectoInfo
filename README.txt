@@ -1,5 +1,6 @@
 
 para usar requirements.txt -> pip install requirements.txt
+para cargar preguntas desde preguntas.csv -> python manage.py add_preguntas
 
 
 CONSOLA CMD
