@@ -16,6 +16,9 @@ class Pregunta(models.Model):
 
     def __str__(Self):
         return Self.texto
+    
+    def desordenar_op(Self):
+        return  Self.opciones.all().order_by("?")
 
 class ElegirRespuesta(models.Model):
 
@@ -39,7 +42,7 @@ class TriviaUsuario(models.Model):
         intento.save()
 
     def obtener_nuevas_preguntas(self):
-        if self.intentos.all().count() > 12:
+        if self.intentos.all().count() == 12:
             return None        
         respondidas = PreguntasRespondidas.objects.filter(triviaUser=self).values_list('pregunta__pk', flat=True)
         preguntas_restantes = Pregunta.objects.exclude(pk__in=respondidas)

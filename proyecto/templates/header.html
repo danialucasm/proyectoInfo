@@ -6,8 +6,8 @@
             <ul class="right hide-on-med-and-down" style=" background-color: #417690; margin-block-end: 1mm;">
                 {% if request.user.is_authenticated %}
                     <li><a href="{% url 'inicio' %}">Inicio</a></li>
+                    <li><a href="{% url 'tablero' %}">Ranking</a></li>                    
                     <li><a href="{% url 'perfil' %}">Perfil</a></li>
-                    <li><a href="{% url 'tablero' %}">Ranking</a></li>
                     <li><a href="{% url 'logout' %}">Salir</a></li>
                 {% endif %}
             </ul>

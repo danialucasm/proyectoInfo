@@ -35,7 +35,7 @@
                 {% csrf_token %}
                 <input type="hidden" name="pregunta_pk" value="{{pregunta.pk}}">
                 <p style="text-align: left;"> Seleccione una: </p>
-                {% for opciones in pregunta.opciones.all %}
+                {% for opciones in pregunta.desordenar_op %}
                 <p style="text-align: left;">
                     <label for="choice-{{forloop.counter}}">
                         <input class="with-gap" type="radio" name="respuesta_pk" value="{{opciones.pk}}" id="choice-{{forloop.counter}}" checked />
