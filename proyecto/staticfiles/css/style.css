@@ -1,0 +1,509 @@
+
+
+
+body{ 
+	font-size: 62.5%;
+	font-family: 'Varela Round', Helvetica, Arial, serif;
+  background-image: url("https://img.freepik.com/free-vector/abstract-geometric-shapes-outline-circle-triangle-cube-trendy-memphis-style-symbols-lines-dots-patterns-geometry-maths-hipster-ornament-abstract-signs-isolated-vector-icons-set_102902-2029.jpg?size=626&ext=jpg");
+  background-repeat: repeat-x;
+  background-size: 13rem;
+}
+/* Global Styles*/
+/* h1{
+  
+} */
+
+/* h2{
+} */
+
+.bloque{
+  width: 100%;
+  height: 100%; 
+  padding-top: 10%;
+  padding-inline:auto;  
+  align-content: center;
+  text-align: center; 
+}
+/*Botones Personalizados*/
+.boton_entendido{
+  text-decoration: none;
+  padding: 10px;
+  font-weight: 100;
+  font-size: 25px;
+  color: #ffffff;
+  background-color: #417690;
+  border-radius: 6px;
+  border: 1px solid #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.boton_entendido:hover{
+  color: #417690;
+  background-color: #ffffff;
+}
+.boton_ingresar{
+  position: static;
+  display: inline;
+  text-decoration: none;
+  padding: 10px;
+  padding-inline: 90px;
+  margin-right: 10%;
+  font-weight: 100;
+  font-size: 25px;
+  color: #ffffff;
+  background-color: #417690;
+  border-radius: 6px;
+  border: 1px solid #ffffff;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+}
+.boton_ingresar:hover{
+  color: #417690;
+  background-color: #ffffff;
+}
+.boton_registrar{
+  position: static;
+  display: inline;
+  text-decoration: none;
+  padding: 10px;
+  padding-inline: 90px;
+  font-weight: 100;
+  font-size: 25px;
+  color: #ffffff;
+  background-color: #417690;
+  border-radius: 6px;
+  border: 1px solid #ffffff;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+}
+.boton_registrar:hover{
+  color: #417690;
+  background-color: #ffffff;
+}
+ 
+  /*MODIFICAR ESTOS BOTONES*/
+  
+.boton_instrucciones{ 
+  position: static;
+  display: inline;
+  text-decoration: none;
+  padding: 10px;
+  padding-inline:40px;
+  font-weight: 100;
+  font-size: 25px;
+  margin-right: 10%;
+  color: #ffffff;
+  background-color: #417690;
+  border-radius: 6px;
+  border: 1px solid #ffffff;
+  justify-content: center;
+  align-items: center;
+}
+.boton_instrucciones:hover{
+  color: #417690;
+  background-color: #ffffff;
+}
+
+.th-titulo {
+  text-align: center;
+  font-size: 5mm;
+  font-family:'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+
+.th-contenido {
+  text-align: center;
+  font-size: 3mm;  
+}
+
+.boton_jugar{
+  position: static;
+  display: inline;
+  text-decoration: none;
+  padding: 10px;
+  padding-inline:85px;
+  margin:auto;
+  font-weight: 100;
+  font-size: 25px;
+  color: #ffffff;
+  background-color: #417690;
+  border-radius: 6px;
+  border: 1px solid #ffffff;
+  justify-content: center;
+  align-items: center;
+}
+.boton_jugar:hover{
+  color: #417690;
+  background-color: #ffffff;
+}
+
+.center-propio {
+  margin: auto;
+  width: 30%;
+  padding: 150px;
+} /*VEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEER*/
+
+h5{
+	font-size: 1rem;
+	margin-bottom: 0;
+
+}
+
+p{
+	font-size: 1rem;
+}
+
+button{
+	font-size: 1rem;
+	color: white;
+	padding: 0.4rem 1.4rem;
+	border: none;
+	background: #1CA5B8;
+	 border-radius: 4px;
+	cursor: pointer;
+
+}
+
+img{
+	object-fit: cover;
+}
+
+/* Nav bar */
+.main-head{
+	background: #1CA5B8;
+	color:#fff;
+}
+
+nav.main{
+	min-height: 7vh;
+  background-color: #1CA5B8;
+  color:#fff;
+	display: flex;
+	width: 65%;
+	margin: auto; 
+	align-items: center;
+	padding: 0.5rem;
+}
+
+nav.main ul{
+	display: flex;
+	flex: 1 1 40rem;
+	justify-content: space-evenly;
+	align-items: center;
+	list-style: none;
+}
+
+#logo{
+	flex: 2 1 40rem;
+
+}
+
+/* -----*/
+
+a{
+	font-size: .95rem;
+	text-decoration: none;
+	color:#fff;
+}
+
+
+.main{
+	background: white;
+	width: 60%;
+	margin: 5% auto;
+	border-radius: 4px;
+	padding-bottom: 20px;
+}
+
+/* NAVIGATION BAR */
+.second-nav{
+	display: flex;
+	padding: 15px 30px;
+}
+
+.second-nav .feed{
+	flex: 1 1 30px;
+}
+
+.second-nav .feed:hover{
+	flex: 1 1 30px;
+	color: grey;
+}
+
+.second-nav .profile{
+	flex: 1 1 30px;
+}
+
+.second-nav .profile:hover{
+	flex: 1 1 30px;
+	color: grey;
+}
+
+.second-nav .new{
+	flex: 6 1 5rem;
+	text-align: right;
+	text-transform: uppercase;
+  	color: #7A9D96;
+}
+
+.second-nav .new:hover{
+	color: grey;
+}
+
+/* Article */
+
+article{
+	width: 93%;
+	margin: auto;
+	padding: 40px 0;
+	border-bottom: 2px solid #ECEEEF;
+}
+
+.username{
+	margin-bottom: .2rem;
+}
+
+.username a{
+	font-size: 1.1rem;
+}
+
+.container-article{
+  display: flex;
+}
+
+.container-article img{
+  height: 68px;
+  width: 68px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+article:last-child {
+  border-bottom: 0;
+}
+
+time {
+  font-size: .8rem;
+  opacity: .7;
+}
+
+.post{
+	font-size: .94rem;
+}
+
+/* PROFILE */
+.profile{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.profile img{
+  height: 100px;
+  width: 100px;
+  margin-right: 10px;
+  border-radius: 50%;
+  margin: 20px;
+}
+.profile h2{
+	margin-top: -10px;
+	font-size: 1.3rem;
+}
+
+/* Followers / Following / Post */
+.follow{
+	display: flex;
+	width: 95%;
+	justify-content: space-around;
+	margin: 30px auto;
+	text-align: center;
+	border-bottom: 2px solid #ECEEEF;
+	padding-bottom: 20px;
+}
+
+
+/*Form Elements*/
+form {
+    margin: 0;
+    padding: 40px;
+    font-size: 1rem;
+}
+input {
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #D3D8DC;
+  outline: 0;
+  background: #fff;
+  padding: 20px 0 4px;
+  margin: 0 0 20px;
+  color: #777B7E;
+}
+input:focus {
+  border-color: #7A9D96;
+  color: #2C3238;
+}
+textarea {
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #D3D8DC;
+  outline: 0;
+  background: #fff;
+  padding: 20px 0 4px;
+  margin: 0 0 20px;
+  color: #777B7E;
+}
+textarea:focus {
+  border-color: #7A9D96;
+  color: #2C3238;
+}
+button#submit {
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  background: #417690;
+  color: #fff;
+  border: 0;
+  border-radius: 4px;
+  opacity: .8;
+  transition: .35s linear;
+}
+
+button#submit:hover {
+  opacity: 1;
+}
+
+/*Notifications*/
+.notification {
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 0.9rem;
+}
+.success {
+  background: #43DC7E;
+  color: white;
+}
+.error {
+  background: #AB3444;
+  color: white;
+  margin-bottom: 20px;
+}
+
+
+/*Footer*/
+footer{
+  color: white;
+  text-align: center;
+  font-size: .875em;
+  margin: 40px 0;
+}
+
+footer p {
+  opacity: .8;
+}
+
+footer p a {
+  color: white;
+}
+
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+img.profile{
+  height: 80px;
+  width: 80px;
+  margin-right: 10px;
+  margin-left: 30px;
+  border-radius: 50%;
+}
+
+
+.follow-button{
+  color: white;
+}
+
+/*Media Queries*/
+@media (max-width: 786px) {
+  .main {
+    width: 95%;
+  }
+
+}
+
+.recuadro-perfil{
+  background: #edf0f3; 
+  color: black; 
+  width: 45%; 
+  padding: 10px; 
+  border: 2px solid #446790; 
+  border-radius: 15px; 
+}
+.column {
+  float: left;
+  padding: 10px;
+}
+
+.left-recuadro{
+  text-align: center;
+  width: 30%;
+  margin-right: 20px; 
+  
+  padding-top: 0px;
+}
+
+ .right-recuadro {
+  width: 50%;
+  margin: 0px;
+  text-align: left;
+}
+
+.recuadro-instrucciones{
+  padding: 5mm; width: 100%; text-align: justify; background: #edf0f3; color: black; padding: 15px; border: 2px solid #446790; border-radius: 15px;
+}
+
+/*Botones redes sociales */
+.social-networks a {
+  display: inline-flex;
+  color: #ffffff;
+  height: 48px;
+  width: 48px;
+  background-color: #26f014;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 50%;
+  margin: 0 6px;
+  transition: transform 0.4s;
+}
+
+.social-networks a:hover {
+  transform: scale(1.3);
+}
+
+.social-networks a.facebook {
+  background-color: #3c70a4;
+}
+
+.social-networks a.twitter {
+  background-color: #5bd1d7;
+}
+
+.social-networks a.whastapp {
+  background-color: #47ee8c;
+}
+
+.social-networks a.linkedin {
+  background-color: #0a66c2;
+}
