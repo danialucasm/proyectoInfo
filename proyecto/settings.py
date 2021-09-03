@@ -19,7 +19,7 @@ if ambiente == "PROD":
 else:
     DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["info-triviachaco.herokuapp.com"]
 
 
 # Application definition
